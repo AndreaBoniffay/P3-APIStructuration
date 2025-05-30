@@ -53,12 +53,12 @@ def get_patients(
     gender: str = None, 
     dob : datetime = None):
 
-    requete_base = session.query(Patient)
+    requete = session.query(Patient)
 
     if gender :
-        requete = requete_base.filter(Patient.gender == gender)
+        requete = requete.filter(Patient.gender == gender)
     if dob :
-        requete = requete_base.filter(Patient.dob == dob)
+        requete = requete.filter(Patient.dob == dob)
 
     return requete.offset(skip).limit(limit).all()
 
@@ -74,8 +74,8 @@ def get_patient(
     session: Session = Depends(get_session)
     ):
 
-    requete_base = session.query(Patient)
-    patient = requete_base.filter(Patient.subject_id == id).first()
+    requete = session.query(Patient)
+    patient = requete.filter(Patient.subject_id == id).first()
 
     return patient
 
@@ -99,12 +99,12 @@ def get_icd(
     long_title : str = None
     ):
 
-    requete_base = session.query(DICDDiagnosis)
+    requete = session.query(DICDDiagnosis)
 
     if long_title :
-        requete = requete_base.filter(DICDDiagnosis.long_title.ilike(f"%{long_title}%"))
+        requete = requete.filter(DICDDiagnosis.long_title.ilike(f"%{long_title}%"))
     if icd9_code :
-        requete = requete_base.filter(DICDDiagnosis.icd9_code == icd9_code)
+        requete = requete.filter(DICDDiagnosis.icd9_code == icd9_code)
    
     return requete.offset(skip).limit(limit).all()
 
@@ -132,18 +132,18 @@ def get_admissions(
     edouttime : datetime = None,
     diagnosis : str = None):
 
-    requete_base = session.query(Admission)
+    requete = session.query(Admission)
 
     if hadm_id :
-        requete = requete_base.filter(Admission.hadm_id == hadm_id)
+        requete = requete.filter(Admission.hadm_id == hadm_id)
     if admittime :
-        requete = requete_base.filter(Admission.admittime == admittime)
+        requete = requete.filter(Admission.admittime == admittime)
     if admission_type :
-        requete = requete_base.filter(Admission.admission_type.ilike(f"%{admission_type}%"))
+        requete = requete.filter(Admission.admission_type.ilike(f"%{admission_type}%"))
     if edouttime :
-        requete = requete_base.filter(Admission.edouttime == edouttime)
+        requete = requete.filter(Admission.edouttime == edouttime)
     if diagnosis :
-        requete = requete_base.filter(Admission.diagnosis.ilike(f"%{diagnosis}%"))
+        requete = requete.filter(Admission.diagnosis.ilike(f"%{diagnosis}%"))
 
     return requete.offset(skip).limit(limit).all()
 
@@ -159,8 +159,8 @@ def get_patient_admissions(
     session: Session = Depends(get_session)
     ):
 
-    requete_base = session.query(Admission)
-    admissions = requete_base.filter(Admission.subject_id == id)
+    requete = session.query(Admission)
+    admissions = requete.filter(Admission.subject_id == id)
 
     return admissions.all()
 
@@ -188,15 +188,15 @@ def get_icd_admissions(
     icd9_code : int = None
     ):
 
-    requete_base = session.query(DiagnosisICD)
+    requete = session.query(DiagnosisICD)
 
     if hadm_id :
-        requete = requete_base.filter(DiagnosisICD.hadm_id == hadm_id)
+        requete = requete.filter(DiagnosisICD.hadm_id == hadm_id)
     if subject_id :
-        requete = requete_base.filter(DiagnosisICD.subject_id == subject_id)
+        requete = requete.filter(DiagnosisICD.subject_id == subject_id)
     if seq_num :
-        requete = requete_base.filter(DiagnosisICD.seq_num == seq_num)
+        requete = requete.filter(DiagnosisICD.seq_num == seq_num)
     if icd9_code :
-        requete = requete_base.filter(DiagnosisICD.icd9_code == icd9_code)
+        requete = requete.filter(DiagnosisICD.icd9_code == icd9_code)
    
     return requete.offset(skip).limit(limit).all()
