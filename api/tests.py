@@ -1,6 +1,8 @@
 # %%
 from database import SessionLocal
 from modeles import Patient, Admission, DICDDiagnosis, DiagnosisICD
+from datetime import datetime
+
 
 db = SessionLocal()
 
@@ -49,3 +51,23 @@ for x in dicd_diags:
 else:
     print("No diag found.")
 
+# %%
+def get_patients( 
+    skip: int = 0, 
+    limit: int=100, 
+    gender: str = None, 
+    dob : datetime = None):
+
+    requete_base = db.query(Patient)
+
+    if gender :
+        requete = requete_base.filter(Patient.gender)
+    if dob :
+        requete = requete_base.filter(Patient.dob)
+
+    return requete.offset(skip).limit(limit).all
+# %%
+get_patients(gender="M")
+
+
+# %%
