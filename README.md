@@ -80,3 +80,11 @@ Codes ICD9 filtrés par titre :
 
 Admissions d’un patient :  
 `GET /patient_admissions?id=12345`
+
+##  Licence
+
+Ce projet est sous licence MIT - voir le fichier [📄 LICENSE](LICENSE) pour plus de détails.
+
+##  Contact
+
+[📩 Andréa Boniffay](https://andreaboniffay.github.io) - N'hésitez pas ;) 
