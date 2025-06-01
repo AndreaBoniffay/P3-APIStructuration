@@ -70,4 +70,3 @@ def get_patients(
 get_patients(gender="M")
 
 
-# %%

@@ -2,8 +2,6 @@ from fastapi import FastAPI,Depends
 from modeles import Patient, Admission, DICDDiagnosis, DiagnosisICD
 from database import SessionLocal
 from sqlalchemy.orm import Session
-from sqlalchemy.orm import joinedload
-from typing import Optional
 from datetime import datetime
 
 #utiliser ilike pour les pathologies

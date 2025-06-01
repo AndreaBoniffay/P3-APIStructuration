@@ -1,5 +1,5 @@
 from sqlalchemy import (
-    create_engine, Column, Integer, String, DateTime, Text,
+    Column, Integer, DateTime, Text,
     ForeignKey, PrimaryKeyConstraint
 )
 from sqlalchemy.orm import declarative_base, relationship
