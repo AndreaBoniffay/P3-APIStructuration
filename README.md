@@ -16,7 +16,7 @@ Ce projet vise à structurer et intégrer des données issues de fichiers CSV da
 
 - Un espace Notion récapitulant chacune des étapes du projet sera prochainement disponible ici : [👉 lien bientot dispo](https://andreaboniffay.github.io)  
 
-L’API est développée avec FastAPI, elle permet d’interagir avec la base de données SQLite `Clinical.db`. Seules les tables concernant les patients, leurs admissions ainsi que les diagnostics ICD et D ICD y sont renseignés.
+Une API est développée avec FastAPI, et permet d’interagir avec la base de données SQLite `Clinical.db`. Seules les tables concernant les patients, leurs admissions ainsi que les diagnostics ICD et D ICD y sont renseignés.
 
 ##  Dataset
 
