@@ -67,19 +67,19 @@ Cette API est déployée sur Render.com et accessible publiquement juste [ici �
 
 # Exemple d’appels API
 Nombre total de patients :  
-`GET /total_patients`
+`https://mimic-iii-api-p3-apistructuration.onrender.com/total_patients)`
 
-Liste des patients, par exemple uniquement les femmes nées le 1990-01-01 :  
-`GET /patients?gender=F&dob=1990-01-01T00:00:00`
+Liste des patients, par exemple uniquement les femmes :  
+`https://mimic-iii-api-p3-apistructuration.onrender.com/patients?gender=F`
 
 Détails d’un patient :  
-`GET /patient?id=12345`
+`https://mimic-iii-api-p3-apistructuration.onrender.com/patient?id=10006`
 
-Codes ICD9 filtrés par titre :  
-`GET /icd?long_title=diabetes`
+Codes ICD9 filtrés par titre contenant "pneumo" :  
+`https://mimic-iii-api-p3-apistructuration.onrender.com/icd?long_title=pneumo`
 
 Admissions d’un patient :  
-`GET /patient_admissions?id=12345`
+`https://mimic-iii-api-p3-apistructuration.onrender.com/patient_admissions?id=10006`
 
 ##  Licence
 
