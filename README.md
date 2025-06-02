@@ -14,17 +14,24 @@ Ce projet vise à structurer et intégrer des données issues de fichiers CSV da
 ![image](https://github.com/user-attachments/assets/77a25c1d-5aa4-4f9a-9d5b-548a7db2ae01)
 
 
-- Un espace Notion récapitulant chacune des étapes du projet sera prochainement disponible ici : [👉 lien bientot dispo](https://andreaboniffay.github.io)  
+👉 Un espace Notion récapitulant chacune des étapes du projet sera prochainement disponible ici : [lien bientôt dispo ;)](https://andreaboniffay.github.io)  
 
-Une API est développée avec FastAPI, et permet d’interagir avec la base de données SQLite `Clinical.db`. Seules les tables concernant les patients, leurs admissions ainsi que les diagnostics ICD et D ICD y sont renseignés.
+Une API est développée avec **FastAPI**, et permet d’interagir avec la base de données **SQLite** `Clinical.db`.  
 
-##  Dataset
+
+
+###  Dataset :
 
 Pour ce projet, nous utilisons la base de données : *MIMIC-III Clinical Database Demo* disponibles sur physionet.
 - **URL :** [🔗 MIMIC III Demo csv files](https://physionet.org/content/mimiciii-demo/1.4/)  
-- **Référence :** [📖 Johnson, A., Pollard, T., Shen, L. et al. MIMIC-III, a freely accessible critical care database. Sci Data 3, 160035 (2016).](https://www.nature.com/articles/sdata201635)
+- **Référence :** [📖 Johnson, A., Pollard, T., Shen, L. et al. MIMIC-III, a freely accessible critical care database. Sci Data 3, 160035 (2016).](https://www.nature.com/articles/sdata201635)  
 
-
+Seules les tables :  
+- `patients.csv`
+- `admissions.csv`
+- `diagnostics_ICD.csv`
+- `D_ICD_diagnostics.csv` y sont renseignées.
+  
 
 Fonctionnalités principales de l'API
 ---------------------------
