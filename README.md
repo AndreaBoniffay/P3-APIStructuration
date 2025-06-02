@@ -63,7 +63,7 @@ FastAPI génère automatiquement la documentation Swagger à l’URL : "http://1
 ![image](https://github.com/user-attachments/assets/b0137604-705a-4b28-914f-985d3efe215b)
 
 # Déploiement
-Cette API est déployée sur Render.com et accessible publiquement juste [ici ✨](https://physionet.org/content/mimiciii-demo/1.4/) 
+Cette API est déployée sur Render.com et accessible publiquement juste [ici ✨](https://mimic-iii-api-p3-apistructuration.onrender.com/) 
 
 # Exemple d’appels API
 Nombre total de patients :  
